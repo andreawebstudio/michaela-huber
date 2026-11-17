@@ -185,16 +185,16 @@ h3 { font-size: clamp(1.15rem, 1.08rem + .3vw, 1.3rem); }
   background: var(--white); text-align: center;
 }
 .hero-media { position: absolute; inset: 0; z-index: -2; }
-.hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; filter: blur(1.5px); transform: scale(1.04); }
+.hero-media img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; filter: blur(.6px); transform: scale(1.02); }
 .hero-overlay {
   position: absolute; inset: 0; z-index: -1;
   background:
-    radial-gradient(ellipse 68% 64% at 50% 50%, rgba(255, 255, 255, .92) 0%, rgba(255, 255, 255, .84) 55%, rgba(255, 255, 255, .66) 100%),
-    linear-gradient(180deg, rgba(255, 255, 255, .5) 0%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 72%, rgba(255, 255, 255, .95) 100%);
+    radial-gradient(ellipse 68% 64% at 50% 50%, rgba(255, 255, 255, .8) 0%, rgba(255, 255, 255, .66) 55%, rgba(255, 255, 255, .42) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, .35) 0%, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0) 75%, rgba(255, 255, 255, .9) 100%);
 }
 .hero-content { display: flex; flex-direction: column; align-items: center; max-width: 1040px; }
 .h1-line { display: block; }
-.h1-accent { color: var(--accent); }
+.h1-accent { color: var(--sky); }
 @media (min-width: 900px) { .h1-line { white-space: nowrap; } }
 .hero-lead { max-width: 640px; margin: 1.6rem auto 0; font-size: clamp(1.05rem, .98rem + .4vw, 1.22rem); line-height: 1.65; color: var(--ink); }
 .hero-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: .9rem; margin-top: 2.4rem; }
@@ -316,11 +316,11 @@ h3 { font-size: clamp(1.15rem, 1.08rem + .3vw, 1.3rem); }
    ========================================================== */
 .lab-cover {
   position: relative; display: block; width: 100%; max-width: 760px; margin-inline: auto; padding: 0;
-  aspect-ratio: 575 / 405; border: 0; border-radius: 18px; overflow: hidden; cursor: pointer;
+  aspect-ratio: 446 / 288; border: 0; border-radius: 18px; overflow: hidden; cursor: pointer;
   background: var(--sand); box-shadow: var(--shadow-md); isolation: isolate;
   transition: transform var(--t-med) var(--ease), box-shadow var(--t-med) var(--ease);
 }
-/* foto intera, senza tagli: stesso rapporto dell'originale (575×405) */
+/* foto intera, senza tagli: stesso rapporto dell'originale (446×288) */
 .lab-cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; z-index: -1; transition: transform 900ms var(--ease); }
 .lab-cover:hover { transform: translateY(-3px); box-shadow: 0 0 0 4px var(--sky-30), var(--shadow-md); }
 .lab-cover:hover img { transform: scale(1.02); }
@@ -444,7 +444,7 @@ h3 { font-size: clamp(1.15rem, 1.08rem + .3vw, 1.3rem); }
 /* ==========================================================
    CONTATTI — solo il modulo
    ========================================================== */
-.contact-form-wrap { max-width: 680px; margin-inline: auto; background: var(--surface); border: 1px solid var(--line-soft); border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: clamp(1.4rem, 4vw, 2.4rem); }
+.contact-form-wrap { max-width: 540px; margin-inline: auto; background: var(--surface); border: 1px solid var(--line-soft); border-radius: var(--radius); box-shadow: var(--shadow-sm); padding: clamp(1.2rem, 3vw, 1.75rem); }
 .field-row { display: grid; gap: 0 1rem; }
 .field { margin-bottom: 1rem; min-width: 0; }
 .field label { display: block; margin-bottom: .4rem; font-size: .88rem; font-weight: 600; color: var(--ink); }
@@ -455,7 +455,7 @@ h3 { font-size: clamp(1.15rem, 1.08rem + .3vw, 1.3rem); }
   background: var(--white); color: var(--ink); font-size: 1rem; transition: border-color var(--t-fast), box-shadow var(--t-fast);
   -webkit-appearance: none; appearance: none;
 }
-.field textarea { min-height: 120px; resize: vertical; line-height: 1.55; }
+.field textarea { min-height: 96px; resize: vertical; line-height: 1.55; }
 .field input:hover, .field select:hover, .field textarea:hover { border-color: var(--sky); }
 .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--sky-30); }
 .field [aria-invalid="true"] { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-15); }
@@ -485,7 +485,7 @@ h3 { font-size: clamp(1.15rem, 1.08rem + .3vw, 1.3rem); }
 /* ==========================================================
    FOOTER
    ========================================================== */
-.site-footer { background: var(--blue); color: var(--white); padding-top: clamp(3.5rem, 7vw, 5rem); }
+.site-footer { background: var(--ink); color: var(--white); padding-top: clamp(3.5rem, 7vw, 5rem); }
 .site-footer a { color: var(--white); text-decoration: none; }
 .site-footer a:hover { text-decoration: underline; color: var(--white); }
 .site-footer :focus-visible { outline-color: var(--white); }
@@ -528,7 +528,7 @@ h3 { font-size: clamp(1.15rem, 1.08rem + .3vw, 1.3rem); }
   :root { --header-h: 68px; }
   .hero { min-height: auto; padding-block: 3.5rem 3.25rem; }
   .hero-media img { object-position: 50% 25%; }
-  .hero-overlay { background: linear-gradient(180deg, rgba(255, 255, 255, .88) 0%, rgba(255, 255, 255, .86) 60%, rgba(255, 255, 255, .95) 100%); }
+  .hero-overlay { background: linear-gradient(180deg, rgba(255, 255, 255, .76) 0%, rgba(255, 255, 255, .72) 60%, rgba(255, 255, 255, .9) 100%); }
   .hero-actions { flex-direction: column; align-items: stretch; width: 100%; max-width: 360px; }
   .hero-actions .btn { width: 100%; }
   .hero-doodle svg { width: 104px; height: 46px; }
